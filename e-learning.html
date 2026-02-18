@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animated E-Learning Platform</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:linear-gradient(120deg,#4facfe,#00f2fe);
+}
+
+/* Navbar */
+header{
+    background:rgba(0,0,0,0.3);
+    padding:15px;
+    text-align:center;
+    color:white;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:white;
+    color:#333;
+    cursor:pointer;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* Page sections */
+.page{
+    display:none;
+    padding:40px;
+    text-align:center;
+    animation:fade 0.6s ease;
+}
+
+.active{ display:block; }
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Course Cards */
+.course-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:230px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+.card button{
+    background:#4facfe;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    margin-top:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Video */
+iframe{
+    border-radius:10px;
+}
+
+/* Progress Bar */
+.progress{
+    width:60%;
+    height:30px;
+    background:#ddd;
+    margin:auto;
+    border-radius:20px;
+}
+
+.fill{
+    height:100%;
+    width:0;
+    background:#28a745;
+    border-radius:20px;
+    transition:width 1s ease;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🎓 E-Learning Platform</h2>
+<nav>
+<button onclick="showPage('courses')">Courses</button>
+<button onclick="showPage('video')">Learning</button>
+<button onclick="showPage('progress')">Progress</button>
+</nav>
+</header>
+
+<!-- COURSE LIST -->
+<div id="courses" class="page active">
+<h2>Available Courses</h2>
+
+<div class="course-container">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>HTML, CSS, JavaScript</p>
+<button onclick="startCourse()">Start</button>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Programming Basics</p>
+<button onclick="startCourse()">Start</button>
+</div>
+
+<div class="card">
+<h3>Data Structures</h3>
+<p>Learn Algorithms</p>
+<button onclick="startCourse()">Start</button>
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO PAGE -->
+<div id="video" class="page">
+<h2>Course Video</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/qz0aGYrrlhU">
+</iframe>
+
+<br><br>
+<button onclick="complete()">Mark Completed</button>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="progress" class="page">
+<h2>Your Progress</h2>
+
+<div class="progress">
+<div class="fill" id="bar"></div>
+</div>
+
+<p id="text"></p>
+</div>
+
+<script>
+
+function showPage(id){
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+function startCourse(){
+    showPage("video");
+}
+
+function complete(){
+    localStorage.setItem("progress",70);
+    alert("Progress Updated!");
+}
+
+let value=localStorage.getItem("progress")||30;
+document.getElementById("bar").style.width=value+"%";
+document.getElementById("text").innerText="Completed "+value+"%";
+
+</script>
+
+</body>
+</html>
