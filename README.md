@@ -25,3 +25,5 @@ The quiz application has many real-world uses. In education, teachers can use it
 
 *OUTPUT*:
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e66d595f-581f-4b56-89f3-345e0888e35a" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/31b54507-e141-4fb9-a11b-d3b0a6edf03d" />
