@@ -22,3 +22,6 @@ JavaScript plays the most important role in this project because it provides int
 This project can be created using any simple text editor, such as Notepad, Notepad++, Sublime Text, or Visual Studio Code. After writing the code, the file is saved with a .html extension and opened directly in any web browser like Chrome, Edge, or Firefox. Since this is a front-end project, it does not require a database, server, or internet connection to run, making it easy to develop and test.
 
 The quiz application has many real-world uses. In education, teachers can use it for online tests, practice quizzes, and student assessments. In e-learning platforms, quizzes help evaluate learners’ understanding after completing lessons. Companies can use similar systems for employee training and recruitment tests. It can also be used for entertainment purposes such as online trivia games. Overall, this project is very useful for beginners learning web development because it teaches important concepts like arrays, conditions, loops, event handling, timers, and dynamic content updates while building a practical and interactive application.
+
+*OUTPUT*:
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e66d595f-581f-4b56-89f3-345e0888e35a" />
