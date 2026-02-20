@@ -10,7 +10,7 @@
 
 *DURATION*: 4 WEEKS
 
-*MENTOR*: NEELA SANTOSH
+*MENTOR*: NEELA SANTOSH 
 
 *DESCRIPTION*:
 This project is a simple and interactive web-based quiz application developed using three main front-end web technologies: HTML, CSS, and JavaScript. These three tools work together to create the structure, appearance, and functionality of the quiz so that it can run smoothly inside any web browser. HTML, which stands for HyperText Markup Language, is used to build the basic structure of the webpage. It organizes the content into different sections such as the heading, quiz container, timer display, question area, answer options, score display, and restart button. In this project, HTML acts as the backbone that holds all elements together. It uses tags like div, button, span, and heading elements to arrange and display the quiz content in a clear and structured way. Without HTML, the webpage would not have any visible content or proper organization.
